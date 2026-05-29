@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventPop LLC | Party & Event Rentals — Philadelphia Area</title>
+  <meta name="description" content="EventPop LLC is a premium party and event rental company serving Philadelphia, South Jersey, Delaware, Lehigh Valley & Lancaster County. Full-service party rentals, hosted Nerf Wars, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="style.css?v=3" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- ════════════ PROMO MODAL (POP-UP) ════════════ -->
+  <div class="modal-overlay" id="promoModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close pop-up" id="promoModalClose">×</button>
+      
+      <div class="modal-header">
+        <h2>Special Experience Offers</h2>
+        <p>Make your next event pop with these community-driven deals!</p>
+      </div>
+      
+      <div class="modal-body">
+        <div class="promo-item">
+          <span class="promo-title">🎉 First-Time Host?</span>
+          <p>Save 10% on your first EventPop experience! Just let us know you're a first-time customer when submitting your inquiry and we'll apply it to your quote.</p>
+        </div>
+        
+        <div class="promo-item">
+          <span class="promo-title">Service Heroes Discount</span>
+          <p>We honor medical staff, first responders, and teachers with exclusive rates. <a href="#community" class="promo-link" onclick="document.getElementById('promoModal').style.display='none'">Learn More</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ══════════════════════════════════════════════ -->
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="navbar" id="navbar" data-aos="fade-down" data-aos-duration="800">
+    <div class="nav-container">
+
+<a href="#top" class="nav-logo">
+  <img
+    src="images/eventpop-logo.png"
+    alt="EventPop LLC logo"
+    class="nav-logo-img"
+    onerror="this.onerror=null;this.src='https://via.placeholder.com/150x50/ff6b35/ffffff?text=EventPop+LLC';"
+  />
+  <div class="nav-logo-text-group">
+    <div class="logo-text"><span class="logo-accent">EventPop</span> LLC</div>
+    <div class="logo-llc">Party &amp; Event Rentals</div>
+  </div>
+</a>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#packages">Packages</a>
+        <a href="#quote">Get a Quote</a>
+        <a href="#about">About</a>
+        <a href="#area">Service Area</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn nav-cta">Book Now</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <a href="#services">Services</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#packages">Packages</a>
+      <a href="#quote">Get a Quote</a>
+      <a href="#about">About</a>
+      <a href="#area">Service Area</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Book Now</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="mvp-badge">Best Value · Client-First · Every Event Matters.</div>
+        <h1 class="hero-headline">
+          <div class="hero-title-static">We Make Your Event</div>
+          <div class="hero-typed-line">
+            <span class="hero-typed" id="heroTyped">Unforgettable.</span>
+          </div>
+        </h1>
+        <p class="hero-sub">
+          Philadelphia's premium party rental company — a full catalog across 15 categories,
+          serving a 50-mile radius from King of Prussia.
+        </p>
+        <div class="hero-actions">
+          <a href="#quote" class="btn btn-hero-primary">Get a Free Quote →</a>
+          <a href="#catalog" class="btn btn-hero-secondary">Browse the Catalog</a>
+        </div>
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+          <div class="hero-stat">
+            <span class="stat-num" data-target="131" data-suffix="+">0</span>
+            <span class="stat-label">Items in Our Catalog</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="15">0</span>
+            <span class="stat-label">Rental Categories</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="100" data-suffix="%">0</span>
+            <span class="stat-label">Licensed & Insured</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-num" data-target="50" data-suffix=" mi">0</span>
+            <span class="stat-label">Service Radius</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mvp-section" data-aos="fade-up">
+      <div class="container">
+        <div class="mvp-statement">
+          <div class="mvp-icon">🎉</div>
+          <div>
+            <h2 class="mvp-headline">Your Event. Your Vision. Our Priority.</h2>
+            <p class="mvp-body">
+              At EventPop LLC, you come first — always. Every event is special and uniquely tailored to you.
+              We guarantee the best value with no hidden fees, and we're here to help with any inquiries,
+              questions, comments, or concerns. You dream it, we bring it.
+            </p>
+            <div class="mvp-pillars">
+              <span>✅ Best Value Guaranteed</span>
+              <span>🤝 Client-First Always</span>
+              <span>✨ Every Event Is Special</span>
+              <span>💬 We Cater to Every Need</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">What We Offer</div>
+          <h2 class="section-title">15 Categories of Rentals</h2>
+          <p class="section-sub">Click any category to browse those items in the catalog below.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card" data-cat="seating" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="50">
+            <div class="service-icon">🪑</div>
+            <div class="service-name">Seating</div>
+            <div class="service-count">9 items</div>
+          </div>
+          <div class="service-card" data-cat="tables" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-icon">🍽️</div>
+            <div class="service-name">Tables</div>
+            <div class="service-count">8 items</div>
+          </div>
+          <div class="service-card" data-cat="tents" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="150">
+            <div class="service-icon">⛺</div>
+            <div class="service-name">Tents & Canopies</div>
+            <div class="service-count">6 items</div>
+          </div>
+          <div class="service-card" data-cat="linens" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-icon">🌸</div>
+            <div class="service-name">Linens & Tableware</div>
+            <div class="service-count">11 items</div>
+          </div>
+          <div class="service-card" data-cat="decor" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="50">
+            <div class="service-icon">🌺</div>
+            <div class="service-name">Decor & Centerpieces</div>
+            <div class="service-count">18 items</div>
+          </div>
+          <div class="service-card" data-cat="lighting" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-icon">💡</div>
+            <div class="service-name">Lighting & Neon</div>
+            <div class="service-count">11 items</div>
+          </div>
+          <div class="service-card" data-cat="inflatables" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="150">
+            <div class="service-icon">🏰</div>
+            <div class="service-name">Inflatables</div>
+            <div class="service-count">6 items</div>
+          </div>
+          <div class="service-card service-card-featured" data-cat="nerf" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-icon">🔫</div>
+            <div class="service-name">Nerf Wars</div>
+            <div class="service-badge">⭐ Signature</div>
+          </div>
+          <div class="service-card" data-cat="photo" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="50">
+            <div class="service-icon">📸</div>
+            <div class="service-name">Photo & Video</div>
+            <div class="service-count">6 items</div>
+          </div>
+          <div class="service-card" data-cat="yard" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-icon">🎯</div>
+            <div class="service-name">Yard Games</div>
+            <div class="service-count">10 items</div>
+          </div>
+          <div class="service-card" data-cat="concession" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="150">
+            <div class="service-icon">🍿</div>
+            <div class="service-name">Concession Machines</div>
+            <div class="service-count">6 items</div>
+          </div>
+          <div class="service-card" data-cat="audio" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-icon">🎵</div>
+            <div class="service-name">Audio & AV</div>
+            <div class="service-count">9 items</div>
+          </div>
+          <div class="service-card" data-cat="highticket" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="50">
+            <div class="service-icon">🎪</div>
+            <div class="service-name">High-Ticket Experiences</div>
+            <div class="service-count">9 items</div>
+          </div>
+          <div class="service-card" data-cat="lounge" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-icon">🛋️</div>
+            <div class="service-name">Lounge Furniture</div>
+            <div class="service-count">6 items</div>
+          </div>
+          <div class="service-card" data-cat="essentials" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="150">
+            <div class="service-icon">🛠️</div>
+            <div class="service-name">Event Essentials</div>
+            <div class="service-count">12 items</div>
+          </div>
+        </div>
+        <div class="services-special-note" data-aos="fade-up">
+          <div class="special-note-inner">
+            <span>💬</span>
+            <div>
+              <strong>Don't have an item? Request it — we probably have it!</strong>
+              Special occasions? We can accommodate. Any inquiries, questions, comments,
+              or concerns — we're here and happy to help clarify anything!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">Full Inventory</div>
+          <h2 class="section-title">Browse Our Full Catalog</h2>
+          <p class="section-sub">Search or filter by category. Click any item to see details and add to your quote.</p>
+        </div>
+        <div class="catalog-controls" data-aos="fade-up" data-aos-delay="100">
+          <input type="search" id="catalogSearch" class="catalog-search" placeholder="🔍  Search items..." aria-label="Search catalog" />
+          
+          <div class="catalog-sort">
+            <label for="catalogSort">Sort by:</label>
+            <select id="catalogSort">
+              <option value="relevance">Relevance</option>
+              <option value="priceLowHigh">Price: Low to High</option>
+              <option value="priceHighLow">Price: High to Low</option>
+            </select>
+          </div>
+
+          <div class="catalog-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="seating">🪑 Seating</button>
+            <button class="filter-btn" data-filter="tables">🍽️ Tables</button>
+            <button class="filter-btn" data-filter="tents">⛺ Tents</button>
+            <button class="filter-btn" data-filter="linens">🌸 Linens</button>
+            <button class="filter-btn" data-filter="decor">🌺 Decor</button>
+            <button class="filter-btn" data-filter="lighting">💡 Lighting</button>
+            <button class="filter-btn" data-filter="inflatables">🏰 Inflatables</button>
+            <button class="filter-btn" data-filter="nerf">🔫 Nerf Wars</button>
+            <button class="filter-btn" data-filter="photo">📸 Photo</button>
+            <button class="filter-btn" data-filter="yard">🎯 Yard Games</button>
+            <button class="filter-btn" data-filter="concession">🍿 Concessions</button>
+            <button class="filter-btn" data-filter="audio">🎵 Audio & AV</button>
+            <button class="filter-btn" data-filter="highticket">🎪 High-Ticket</button>
+            <button class="filter-btn" data-filter="lounge">🛋️ Lounge</button>
+            <button class="filter-btn" data-filter="essentials">🛠️ Essentials</button>
+          </div>
+        </div>
+
+        <div class="catalog-grid-wrap" data-aos="fade-in" data-aos-delay="200">
+          <div class="catalog-grid" id="catalogGrid"></div>
+        </div>
+
+        <div class="catalog-footer-note" data-aos="fade-up">
+          <strong>Don't see what you need?</strong> We're always growing our inventory.
+          <a href="#contact" class="text-link">Contact us</a> and we'll do our best to accommodate.
+          Special occasions and custom setups welcome!
+        </div>
+      </div>
+    </section>
+
+<div class="catalog-modal" id="catalogModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+  
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose" aria-label="Close modal" onclick="closeModal()">✕</button>
+    
+    <img id="modalImg" class="modal-img-placeholder" src="" alt="" loading="lazy" />
+    
+    <div class="modal-body">
+      <div class="modal-category" id="modalCat">Category</div>
+      <h2 class="modal-title" id="modalTitle">Item Name</h2>
+      <div class="modal-price-range" id="modalPrice">$0 - $0 / event</div>
+      <p class="modal-desc" id="modalDesc">Item description goes here.</p>
+      
+      <div class="modal-actions">
+        <div class="modal-qty-control">
+          <span style="font-weight: 600; font-size: 0.9rem; color: var(--color-text);">Qty:</span>
+          <button class="modal-qty-btn" data-action="dec">-</button>
+          <input type="number" id="modalQtyInput" style="width: 32px; background: transparent; border: none; text-align: center; font-weight: bold; font-size: 1rem; color: var(--color-text);" value="1" min="0" />
+          <button class="modal-qty-btn" data-action="inc">+</button>
+        </div>
+        
+        <button class="btn btn-primary" id="modalAddBtn">+ Update Quote</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <section class="section section-alt" id="packages">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">Pre-Built Bundles</div>
+          <h2 class="section-title">13 Ready-Made Packages</h2>
+          <p class="section-sub">
+            Packages are starting points — fully customizable. Choose one, have us recommend a bundle,
+            or build fully custom. <strong>All prices are estimates.</strong>
+          </p>
+        </div>
+        <div class="packages-grid">
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="pkg-emoji">🏡</div>
+            <h3>Backyard Starter</h3>
+            <div class="pkg-price">$89 – $109</div>
+            <ul><li>10 chairs</li><li>2 round tables</li><li>2 tablecloths</li></ul>
+            <p style="font-size:.9rem;color:var(--color-text-muted)">Perfect for small family events.</p>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card pkg-featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="pkg-popular-badge">⭐ Most Popular</div>
+            <div class="pkg-emoji">🎂</div>
+            <h3>Birthday Bash Basics</h3>
+            <div class="pkg-price">$149 – $179</div>
+            <ul><li>20 chairs</li><li>3 round tables</li><li>Linens</li><li>1 backdrop</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="pkg-emoji">🍸</div>
+            <h3>Cocktail Hour Kit</h3>
+            <div class="pkg-price">$145 – $165</div>
+            <ul><li>6 high-tops + covers</li><li>3 beverage dispensers</li><li>1 backdrop stand</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="pkg-emoji">🏕️</div>
+            <h3>Full Event Setup</h3>
+            <div class="pkg-price">$399 – $449</div>
+            <ul><li>50 chairs</li><li>6 round tables</li><li>Linens</li><li>Tent</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card pkg-featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="pkg-popular-badge">🔫 Signature</div>
+            <div class="pkg-emoji">🔫</div>
+            <h3>Nerf Wars Bundle</h3>
+            <div class="pkg-price">$275 – $315</div>
+            <ul><li>Hosted Nerf party (10 kids)</li><li>20 chairs</li><li>3 tables</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="pkg-emoji">🎬</div>
+            <h3>Outdoor Movie Night</h3>
+            <div class="pkg-price">$349 – $399</div>
+            <ul><li>16ft screen</li><li>HD projector</li><li>PA speaker</li><li>20 chairs</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="pkg-emoji">📸</div>
+            <h3>Photo Moment Package</h3>
+            <div class="pkg-price">$450 – $520</div>
+            <ul><li>Flower wall</li><li>Photo backdrop</li><li>Neon sign</li><li>Arch</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="pkg-emoji">🍿</div>
+            <h3>Snack Station Bundle</h3>
+            <div class="pkg-price">$175 – $199</div>
+            <ul><li>Popcorn machine</li><li>Cotton candy</li><li>Snow cone</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card pkg-featured" data-aos="fade-up" data-aos-delay="150">
+            <div class="pkg-popular-badge">👑 Premium</div>
+            <div class="pkg-emoji">🎉</div>
+            <h3>Ultimate Party Package</h3>
+            <div class="pkg-price">$799 – $929</div>
+            <ul><li>Full setup</li><li>Bounce house</li><li>Photo booth</li><li>Yard games</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="pkg-emoji">💼</div>
+            <h3>Corporate / Formal Event</h3>
+            <div class="pkg-price">$699 – $799</div>
+            <ul><li>60 Chiavari chairs</li><li>8 round tables</li><li>Linens</li><li>Tent + bar</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="pkg-emoji">🛋️</div>
+            <h3>Lounge Luxury</h3>
+            <div class="pkg-price">$550 – $639</div>
+            <ul><li>2 velvet sofas</li><li>Ottomans</li><li>4 ghost chairs</li><li>Neon sign + bar</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="pkg-emoji">🃏</div>
+            <h3>Casino Night Package</h3>
+            <div class="pkg-price">$850 – $979</div>
+            <ul><li>3 casino tables</li><li>20 chairs</li><li>Bar unit</li><li>PA system</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+          <div class="pkg-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="pkg-emoji">❄️</div>
+            <h3>Holiday / Seasonal Package</h3>
+            <div class="pkg-price">$325 – $375</div>
+            <ul><li>Tent</li><li>Patio heaters</li><li>String lights</li><li>Linens + 30 chairs</li></ul>
+            <a href="#quote" class="btn btn-primary">Get This Package</a>
+          </div>
+
+        </div>
+        <p style="text-align:center;margin-top:24px;color:var(--color-text-muted);font-size:.9rem" data-aos="fade-up">
+          * All package prices are estimates. Final pricing depends on date, delivery, and customizations.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-quote-bg" id="quote">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag light">Get a Quote</div>
+          <h2 class="section-title light">Build Your Custom Quote</h2>
+          <p class="section-sub light">Search items, set quantities, and see a live estimate. We'll get back to you within the hour!</p>
+        </div>
+        <div class="quote-builder" data-aos="zoom-in" data-aos-delay="100">
+          <div class="quote-left">
+            <div class="quote-left-header">
+              <h3 style="margin-bottom:6px">Browse Items</h3>
+              <p>Search and set quantities for what you need.</p>
+            </div>
+            <input type="search" id="quoteSearch" class="quote-search" placeholder="🔍  Search items..." style="margin-bottom:14px" />
+            <div class="quote-items-list" id="quoteItemsList"></div>
+          </div>
+          <div class="quote-right">
+            <h3 style="margin-bottom:14px">Your Quote</h3>
+            <div class="quote-progress-wrap">
+              <div class="quote-progress-label">
+                <span id="progressLabel">🛒 Add items to build your quote</span>
+              </div>
+              <div class="quote-progress-bar">
+                <div class="quote-progress-fill" id="progressFill"></div>
+              </div>
+            </div>
+            <div class="quote-empty-state" id="quoteEmpty">
+              <div style="font-size:2.5rem;margin-bottom:10px">🛒</div>
+              <p>Add items from the left to build your quote.</p>
+            </div>
+            <div class="quote-selected-list" id="quoteSelectedList"></div>
+            <div class="quote-range-box" id="quoteRangeBox" style="display:none">
+              <div class="range-row">
+                <span>Items selected:</span>
+                <span id="qItemCount">0</span>
+              </div>
+              <div class="range-row range-total">
+                <span>Estimated total:</span>
+                <strong id="qRangeOutput">$0</strong>
+              </div>
+              <div class="range-note">
+                This estimate is based on your selections. Final pricing accounts for delivery, setup, date, and customizations.
+              </div>
+            </div>
+            
+            <div class="quote-form-wrap" id="quoteFormWrap" style="display:none">
+              <h4>Send Your Quote Request</h4>
+<form action="https://api.web3forms.com/submit" method="POST" id="customQuoteForm">
+  <input type="hidden" name="access_key" value="b09321fd-6525-4aba-8bb8-ca89fd2ebe53">
+  <input type="hidden" name="subject" value="New Quote Request from EventPop">
+  <input type="hidden" name="selected_items" id="qfSelectedItems" value="" />
+  
+  <div class="qf-row" style="margin-bottom:12px">
+    <input type="text" id="qfName" name="name" placeholder="Your name" required />
+    <input type="email" id="qfEmail" name="email" placeholder="Your email" required />
+  </div>
+  <input type="tel" name="phone" placeholder="Phone number (optional)" style="margin-bottom:12px;width:100%;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 18px;background:rgba(255,255,255,.08);color:white" />
+  <textarea name="message" rows="3" placeholder="Event date, location, and any notes..." style="margin-bottom:12px;width:100%;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 18px;background:rgba(255,255,255,.08);color:white"></textarea>
+  <button type="submit" class="btn btn-primary btn-block" id="submitQuote">Send Quote Request →</button>
+</form>
+            
+            <div class="quote-success" id="quoteSuccess" style="display:none">
+              <div style="font-size:3rem;margin-bottom:12px">🎉</div>
+              <h4>Quote sent!</h4>
+              <p style="color:rgba(255,255,255,.7);margin-top:8px">We'll get back to you within the hour during the day, or give us a quick call!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">About Us</div>
+          <h2 class="section-title">Who We Are</h2>
+          <p class="section-sub">
+            EventPop LLC is a locally-owned party and event rental company based in King of Prussia.
+            We combine big-event capability with a personal, hands-on approach for every client.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card" data-aos="fade-up" data-aos-delay="50">
+            <h3>We Stay On Top of Every Detail</h3>
+            <p>From first inquiry to pick-up, we keep communication clear and proactive so you never have to guess.</p>
+          </div>
+          <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Safety & Reliability</h3>
+            <p>Clean, rigorously inspected equipment delivered on time, every single time.</p>
+          </div>
+          <div class="about-card" data-aos="fade-up" data-aos-delay="150">
+            <h3>Transparent Pricing</h3>
+            <p>No hidden delivery fees or surprise charges. The quote you build is what you pay.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section section-alt" id="why">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">Why EventPop</div>
+          <h2 class="section-title">We're Different</h2>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-card" data-aos="zoom-in" data-aos-delay="50">
+            <div class="tc-icon">💰</div>
+            <h3>Best Value</h3>
+            <p style="color:var(--color-text-muted)">Competitive pricing with no hidden fees. You get exactly what you pay for.</p>
+          </div>
+          <div class="trust-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="tc-icon">🤝</div>
+            <h3>You Come First</h3>
+            <p style="color:var(--color-text-muted)">Client-first always. Your satisfaction is our top priority from first contact to event day.</p>
+          </div>
+          <div class="trust-card" data-aos="zoom-in" data-aos-delay="150">
+            <div class="tc-icon">✨</div>
+            <h3>Tailored to Your Needs</h3>
+            <p style="color:var(--color-text-muted)">No cookie-cutter events. Every setup is customized to your vision and style.</p>
+          </div>
+          <div class="trust-card" data-aos="zoom-in" data-aos-delay="50">
+            <div class="tc-icon">🚚</div>
+            <h3>We Come to You</h3>
+            <p style="color:var(--color-text-muted)">Serving a 50-mile radius from King of Prussia. We deliver, set up, and pick up.</p>
+          </div>
+          <div class="trust-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="tc-icon">📞</div>
+            <h3>Always Here to Help</h3>
+            <p style="color:var(--color-text-muted)">Have a question, special request, or general inquiry? We're here and happy to help! Send over your inquiries and we're here to answer them with a response within the hour during the day.</p>
+          </div>
+          <div class="trust-card" data-aos="zoom-in" data-aos-delay="150">
+            <div class="tc-icon">🎊</div>
+            <h3>Every Event Is Special</h3>
+            <p style="color:var(--color-text-muted)">Whether it's a backyard birthday or a 200-person gala, we show up the same way every time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">Reviews</div>
+          <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+        <div class="marquee-container" data-aos="fade-in">
+          <div class="marquee-content">
+            <div class="review-card">
+              <div style="color:#f59e0b;font-size:1.2rem;margin-bottom:10px">★★★★★</div>
+              <p style="color:var(--color-text-muted);margin-bottom:14px">"EventPop made my daughter's quinceañera absolutely perfect. The flower wall and Chiavari chairs were stunning. So easy to work with!"</p>
+              <strong>Maria R.</strong> — Philadelphia, PA
+            </div>
+            <div class="review-card">
+              <div style="color:#f59e0b;font-size:1.2rem;margin-bottom:10px">★★★★★</div>
+              <p style="color:var(--color-text-muted);margin-bottom:14px">"The hosted Nerf Wars party was the highlight of my son's birthday. All the kids were obsessed. 100% booking again next year!"</p>
+              <strong>James T.</strong> — King of Prussia, PA
+            </div>
+            <div class="review-card">
+              <div style="color:#f59e0b;font-size:1.2rem;margin-bottom:10px">★★★★★</div>
+              <p style="color:var(--color-text-muted);margin-bottom:14px">"Used EventPop for my graduation party — tent, tables, the outdoor movie setup. Everything arrived on time and looked amazing."</p>
+              <strong>Aaliyah S.</strong> — Cherry Hill, NJ
+            </div>
+            <div class="review-card">
+              <div style="color:#f59e0b;font-size:1.2rem;margin-bottom:10px">★★★★★</div>
+              <p style="color:var(--color-text-muted);margin-bottom:14px">"EventPop made my daughter's quinceañera absolutely perfect. The flower wall and Chiavari chairs were stunning. So easy to work with!"</p>
+              <strong>Maria R.</strong> — Philadelphia, PA
+            </div>
+            <div class="review-card">
+              <div style="color:#f59e0b;font-size:1.2rem;margin-bottom:10px">★★★★★</div>
+              <p style="color:var(--color-text-muted);margin-bottom:14px">"The hosted Nerf Wars party was the highlight of my son's birthday. All the kids were obsessed. 100% booking again next year!"</p>
+              <strong>James T.</strong> — King of Prussia, PA
+            </div>
+            <div class="review-card">
+              <div style="color:#f59e0b;font-size:1.2rem;margin-bottom:10px">★★★★★</div>
+              <p style="color:var(--color-text-muted);margin-bottom:14px">"Used EventPop for my graduation party — tent, tables, the outdoor movie setup. Everything arrived on time and looked amazing."</p>
+              <strong>Aaliyah S.</strong> — Cherry Hill, NJ
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="area">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">Where We Serve</div>
+          <h2 class="section-title">50-Mile Radius from King of Prussia</h2>
+          <p class="section-sub">We deliver, set up, and pick up across the greater Philadelphia region.</p>
+        </div>
+        <div class="area-grid chips-layout">
+          <div class="area-group chip-group" data-aos="fade-up" data-aos-delay="50">
+            <span class="chip-title">Philadelphia Core</span>
+            <div class="chip-container">
+                <span class="chip">Philadelphia</span><span class="chip">South Philly</span><span class="chip">North Philly</span><span class="chip">West Philly</span><span class="chip">Germantown</span>
+            </div>
+          </div>
+          <div class="area-group chip-group" data-aos="fade-up" data-aos-delay="100">
+            <span class="chip-title">Montgomery County</span>
+            <div class="chip-container">
+                <span class="chip">King of Prussia</span><span class="chip">Norristown</span><span class="chip">Lansdale</span><span class="chip">Blue Bell</span><span class="chip">Horsham</span>
+            </div>
+          </div>
+          <div class="area-group chip-group" data-aos="fade-up" data-aos-delay="150">
+            <span class="chip-title">Chester & Delaware County</span>
+            <div class="chip-container">
+                <span class="chip">Media</span><span class="chip">Chester</span><span class="chip">West Chester</span><span class="chip">Haverford</span><span class="chip">Phoenixville</span>
+            </div>
+          </div>
+          <div class="area-group chip-group" data-aos="fade-up" data-aos-delay="200">
+            <span class="chip-title">South Jersey</span>
+            <div class="chip-container">
+                <span class="chip">Cherry Hill</span><span class="chip">Camden</span><span class="chip">Voorhees</span><span class="chip">Marlton</span><span class="chip">Moorestown</span>
+            </div>
+          </div>
+          <div class="area-group chip-group" data-aos="fade-up" data-aos-delay="250">
+            <span class="chip-title">Lehigh Valley & Beyond</span>
+             <div class="chip-container">
+                <span class="chip">Allentown</span><span class="chip">Bethlehem</span><span class="chip">Easton</span><span class="chip">Lancaster</span><span class="chip">Delaware (select areas)</span>
+            </div>
+          </div>
+        </div>
+        <div class="area-cta-note"  data-aos="fade-in">
+          <strong>Not on this list?</strong> We still may be able to help — <a href="#contact" class="text-link">contact us with your zip code</a>.
+        </div>
+      </div>
+    </section>
+
+
+    <section id="community" class="section" style="background-color: var(--color-surface-2);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Proud to Serve Our Community</h2>
+        <p class="section-subtitle">We believe in giving back to the communities that trust us with their biggest moments.</p>
+      </div>
+      
+      <div class="trust-grid">
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="trust-icon">🇺🇸</div>
+          <h3 class="trust-title">Service Hero Discount</h3>
+          <p class="trust-desc">We’re proud to offer special pricing for those who serve — including healthcare workers, police, firefighters, EMTs, and teachers. Mention your role when requesting a quote and we’ll apply our Service Hero Discount to your base rental.</p>
+        </div>
+        
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="trust-icon">🤝</div>
+          <h3 class="trust-title">5% Giving-Back Pledge</h3>
+          <p class="trust-desc">We donate 5% of our earnings from every EventPop booking to local schools and youth-focused community programs in the greater Philadelphia area. Every booking helps fund our community.</p>
+        </div>
+        
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="trust-icon">🏫</div>
+          <h3 class="trust-title">School & Nonprofit Support</h3>
+          <p class="trust-desc">Your mission is to give back, and our mission is to support you. For local schools, youth programs, registered nonprofits, and community-led fundraising and charity initiatives, we offer adjusted community rates so you can focus on your cause. Tell us about your goals and we'll work together to stretch your budget further.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag">FAQ</div>
+          <h2 class="section-title">Common Questions</h2>
+        </div>
+        <div class="faq-list" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="faq-item" data-aos="fade-up">
+            <button class="faq-q" aria-expanded="false">
+              Do you offer discounts for teachers, medical staff, or first responders? <span>+</span>
+            </button>
+            <div class="faq-a">
+              Yes! We offer a Service Hero Discount. If you are a healthcare worker, police officer, firefighter, EMT, or teacher, please let us know when requesting a quote, and we will apply a special discount to your base rental rate as a thank you for your service.
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <button class="faq-q" aria-expanded="false">
+              How does your 5% giving-back pledge work? <span>+</span>
+            </button>
+            <div class="faq-a">
+              We believe in supporting the community we serve. We donate 5% of our profits from every single EventPop booking to local schools, youth sports, and vetted community nonprofits in the Philadelphia region.
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up">
+            <button class="faq-q" aria-expanded="false">
+              Do you support school events or community fundraisers? <span>+</span>
+            </button>
+            <div class="faq-a">
+              Absolutely. We offer a School & Nonprofit Tier with special base-rate pricing to help schools and charities stretch their budgets further. Let us know the details of your fundraiser or school event when you inquire!
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              How do I get a quote? <span>+</span>
+            </button>
+            <div class="faq-a">
+              Use the quote builder above to select items and quantities — you'll see a live estimate instantly.
+              Submit the form and we'll follow up within the hour during the day. You can also call or email us directly.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              How do payments and deposits work? <span>+</span>
+            </button>
+            <div class="faq-a">
+              Once you approve your final custom quote, we collect a 25% deposit to officially confirm your booking and hold the date. The remaining balance is collected after the event is complete!
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Are there any hidden delivery fees? <span>+</span>
+            </button>
+            <div class="faq-a">
+              No hidden fees, ever. The estimated quote on our website covers the base rental. Final pricing will account for delivery distance (within our 50-mile radius) and setup complexity, which is communicated with 100% transparency upfront.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              What if I need something not in the catalog? <span>+</span>
+            </button>
+            <div class="faq-a">
+              Don't have an item? Request it — we probably have it! Our inventory is always growing. Contact us and we'll do everything we can to source what you need.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Are you licensed and insured? <span>+</span>
+            </button>
+            <div class="faq-a">
+              Yes! We are a fully registered Pennsylvania LLC and carry comprehensive general liability insurance. Safety and reliability are our top priorities for every event.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <div class="section-tag light">Get In Touch</div>
+          <h2 class="section-title light">Let's Make Your Event Amazing.</h2>
+          <p class="section-sub light">Any inquiries, questions, comments, or concerns — we're here and happy to help clarify anything!</p>
+        </div>
+        <div class="contact-split">
+          <div data-aos="fade-right">
+            <h3 style="margin-bottom:8px">Contact Us Directly</h3>
+            <p class="contact-blurb">We usually respond within the hour during the day, or give us a quick call!</p>
+            <div class="contact-methods">
+              <div class="cmethod">
+                <span style="font-size:1.5rem">📞</span>
+                <div>
+                  <div style="font-weight:700">Phone / Text</div>
+                  <a href="tel:12158347537" style="color:rgba(255,255,255,.8)">215-834-7537</a>
+                </div>
+              </div>
+              <div class="cmethod">
+                <span style="font-size:1.5rem">📧</span>
+                <div>
+                  <div style="font-weight:700">Email</div>
+                  <a href="mailto:info@eventpopexperiences.com" style="color:rgba(255,255,255,.8)">info@eventpopexperiences.com</a>
+                </div>
+              </div>
+              <div class="cmethod">
+                <span style="font-size:1.5rem">📍</span>
+                <div>
+                  <div style="font-weight:700">Location</div>
+                  <span style="color:rgba(255,255,255,.8)">King of Prussia, PA</span>
+                </div>
+              </div>
+            </div>
+            <div class="response-badge">⚡ We usually respond within the hour during the day!</div>
+          </div>
+          
+          <div class="contact-form-wrap" data-aos="fade-left">
+            <h3 style="margin-bottom:16px">Send a Message</h3>
+<form action="https://api.web3forms.com/submit" method="POST" id="mainContactForm">
+  <input type="hidden" name="access_key" value="b09321fd-6525-4aba-8bb8-ca89fd2ebe53">
+  <input type="hidden" name="subject" value="New Contact Message from EventPop">
+  
+  <div class="cf-row" style="margin-bottom:14px">
+    <div class="cf-group" style="margin-bottom:0">
+      <label for="cfName">Name</label>
+      <input type="text" id="cfName" name="name" placeholder="Your name" required />
+    </div>
+    <div class="cf-group" style="margin-bottom:0">
+      <label for="cfEmail">Email</label>
+      <input type="email" id="cfEmail" name="email" placeholder="your@email.com" required />
+    </div>
+  </div>
+  <div class="cf-group">
+    <label for="cfPhone">Phone (optional)</label>
+    <input type="tel" id="cfPhone" name="phone" placeholder="215-000-0000" />
+  </div>
+  <div class="cf-group">
+    <label for="cfMsg">Message</label>
+    <textarea id="cfMsg" name="message" rows="4" placeholder="Tell us about your event — date, location, what you need..." required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">Send Message →</button>
+  <p class="form-note">We'll get back to you within the hour during the day!</p>
+</form>
+            
+            <div class="form-success-msg" id="formSuccess" style="display:none">
+              <div style="font-size:3rem;margin-bottom:12px">🎉</div>
+              <h4>Message sent!</h4>
+              <p style="color:var(--color-text-muted);margin-top:8px">We'll be in touch shortly. Talk soon!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px">
+        <div class="footer-logo-row">
+          <img
+            src="images/eventpop-logo.png"
+            alt="EventPop logo"
+            class="footer-logo-img"
+            onerror="this.onerror=null;this.src='https://via.placeholder.com/150x50/ff6b35/ffffff?text=EventPop+LLC';"
+          />
+          <div>
+            <div class="footer-logo-title">
+              Event<span class="logo-accent">Pop</span> LLC
+            </div>
+            <p class="footer-tagline">
+Making every event pop — one experience at a time.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight:700;margin-bottom:8px">Quick Links</div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:.9rem">
+            <a href="#services" style="color:rgba(255,255,255,.7)">Services</a>
+            <a href="#catalog" style="color:rgba(255,255,255,.7)">Catalog</a>
+            <a href="#packages" style="color:rgba(255,255,255,.7)">Packages</a>
+            <a href="#quote" style="color:rgba(255,255,255,.7)">Get a Quote</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight:700;margin-bottom:8px">Contact</div>
+          <div style="font-size:.9rem;display:flex;flex-direction:column;gap:6px">
+            <a href="tel:12158347537" style="color:rgba(255,255,255,.7)">215-834-7537</a>
+            <a href="mailto:info@eventpopexperiences.com" style="color:rgba(255,255,255,.7)">info@eventpopexperiences.com</a>
+            <span style="color:rgba(255,255,255,.7)">King of Prussia, PA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="footer-bottom">
+      <p style="margin-bottom: 8px; font-weight: 600; color: white;">Locally owned in King of Prussia. Proud to support our schools, youth, and those who serve.</p>
+      © 2026 EventPop LLC. All rights reserved. · King of Prussia, PA · Serving 50-mile radius
+    </div>
+  </footer>
+
+  <button class="mini-quote-bar" id="miniQuoteBar" type="button">
+    <div class="mini-quote-main">
+      <span class="mini-quote-icon">🛒</span>
+      <span class="mini-quote-text" id="miniQuoteText">Your quote is empty</span>
+    </div>
+    <span class="mini-quote-cta">View quote</span>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true, // Whether animation should happen only once - while scrolling down
+      offset: 100, // Offset (in px) from the original trigger point
+      duration: 600, // Values from 0 to 3000, with step 50ms
+      easing: 'ease-out-cubic' // Default easing for AOS animations
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
