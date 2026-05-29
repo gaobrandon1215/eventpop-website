@@ -309,33 +309,91 @@ button, input, textarea, select { font: inherit; }
   gap: 20px;
 }
 
-/* SERVICES / MASONRY LAYOUT */
+/* ════════════ UPGRADED GRID CATEGORIES LAYOUT ════════════ */
 .services-grid {
-  column-count: 2;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile devices */
+  gap: 16px;
+  align-items: stretch; /* Forces every card in a row to match height perfectly */
 }
+
 @media (min-width: 768px) {
-  .services-grid { column-count: 3; }
+  .services-grid { 
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+    gap: 20px;
+  }
 }
+
 @media (min-width: 1024px) {
-  .services-grid { column-count: 4; }
+  .services-grid { 
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop laptops */
+    gap: 24px;
+  }
 }
+
 .service-card {
-  break-inside: avoid;
-  margin-bottom: 20px;
-  display: inline-block;
-  width: 100%;
-  padding: 24px 16px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px !important;
+  height: 100%;
+  box-sizing: border-box;
   background: white;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.service-icon { font-size: 2rem; margin-bottom: 10px; }
-.service-count, .service-badge { color: var(--color-text-muted); font-size: .9rem; }
-.service-card-featured { background: var(--brand-grad-soft); }
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Container keeping your new photos constrained perfectly */
+.service-card-img-wrapper {
+  width: 100%;
+  height: 120px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: var(--color-surface-2); /* Elegant placeholder gray if image links are broken */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-icon { 
+  font-size: 2rem; 
+  margin-bottom: 10px; 
+}
+
+.service-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.service-count, .service-badge { 
+  color: var(--color-text-muted); 
+  font-size: .85rem; 
+  margin-top: auto; /* Pushes counts cleanly to the very bottom edge of all cards */
+}
+
+.service-card-featured { 
+  background: var(--brand-grad-soft); 
+}
 
 .services-special-note {
   margin-top: 26px;
@@ -343,14 +401,17 @@ button, input, textarea, select { font: inherit; }
   border-radius: var(--radius-xl);
   padding: 22px;
 }
+
 .special-note-inner {
   display: flex;
   gap: 18px;
   align-items: center;
   flex-wrap: wrap;
 }
-.special-note-inner span:first-child { font-size: 2rem; }
 
+.special-note-inner span:first-child { 
+  font-size: 2rem; 
+}
 /* "WE'RE DIFFERENT" (ZIG-ZAG TIMELINE) */
 .trust-grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
