@@ -87,10 +87,15 @@
 
   <main id="main">
 
-    <section class="hero">
-      <div class="hero-blob hero-blob-1"></div>
-      <div class="hero-blob hero-blob-2"></div>
-      <div class="hero-blob hero-blob-3"></div>
+<section class="hero">
+      <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="Video Project.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="mvp-badge">Best Value · Client-First · Every Event Matters.</div>
+
+
       <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
         <div class="mvp-badge">Best Value · Client-First · Every Event Matters.</div>
         <h1 class="hero-headline">
@@ -157,27 +162,40 @@
           <h2 class="section-title">15 Categories of Rentals</h2>
           <p class="section-sub">Click any category to browse those items in the catalog below.</p>
         </div>
-        <div class="services-grid">
+<div class="services-grid">
           <div class="service-card" data-cat="seating" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="50">
-            <div class="service-icon">🪑</div>
+            <div class="service-card-img-wrapper">
+              <img src="7080466596136185055.jpg" alt="Premium Seating" class="service-card-img" />
+            </div>
             <div class="service-name">Seating</div>
             <div class="service-count">9 items</div>
           </div>
+          
           <div class="service-card" data-cat="tables" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="100">
-            <div class="service-icon">🍽️</div>
+            <div class="service-card-img-wrapper">
+              <img src="15099528769985403704.jpg" alt="Tables" class="service-card-img" />
+            </div>
             <div class="service-name">Tables</div>
             <div class="service-count">8 items</div>
           </div>
+          
           <div class="service-card" data-cat="tents" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="150">
-            <div class="service-icon">⛺</div>
+            <div class="service-card-img-wrapper">
+              <img src="1228042542164212939.avif" alt="Tents & Canopies" class="service-card-img" />
+            </div>
             <div class="service-name">Tents & Canopies</div>
             <div class="service-count">6 items</div>
           </div>
+          
           <div class="service-card" data-cat="linens" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-icon">🌸</div>
+            <div class="service-card-img-wrapper">
+              <img src="10374683211907671380.jpg" alt="Linens & Tableware" class="service-card-img" />
+            </div>
             <div class="service-name">Linens & Tableware</div>
             <div class="service-count">11 items</div>
           </div>
+          
+          <div class="service-card" data-cat="decor" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="50">
           <div class="service-card" data-cat="decor" style="cursor:pointer" data-aos="zoom-in" data-aos-delay="50">
             <div class="service-icon">🌺</div>
             <div class="service-name">Decor & Centerpieces</div>
@@ -247,6 +265,58 @@
       </div>
     </section>
 
+
+
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <div class="section-tag">Our Portfolio</div>
+          <h2 class="section-title">EventPop Production Gallery</h2>
+          <p class="section-sub">Explore real event configurations curated by our rental execution squads.</p>
+        </div>
+
+        <div class="gallery-filters" data-aos="fade-up" data-aos-delay="100">
+          <button class="gallery-filter-btn active" data-filter="all">All Productions</button>
+          <button class="gallery-filter-btn" data-filter="tents">Luxury Tents</button>
+          <button class="gallery-filter-btn" data-filter="furniture">Furniture</button>
+          <button class="gallery-filter-btn" data-filter="details">Tablescapes</button>
+        </div>
+
+        <div class="gallery-masonry-grid" data-aos="fade-up" data-aos-delay="200">
+          <div class="gallery-item tents" onclick="openGalleryLightbox(this)">
+            <img src="Screenshot 2026-05-29 015931.jpg" alt="Clear-Top Marquee Tent" loading="lazy"/>
+          </div>
+          <div class="gallery-item furniture" onclick="openGalleryLightbox(this)">
+            <img src="8290428407179018467.jpg" alt="Lounge sofa setup" loading="lazy"/>
+          </div>
+          <div class="gallery-item tents" onclick="openGalleryLightbox(this)">
+            <img src="17146075501896394869.jpg" alt="Interior tent seating" loading="lazy"/>
+          </div>
+          <div class="gallery-item furniture" onclick="openGalleryLightbox(this)">
+            <img src="6834435834182124503.jpg" alt="Outdoor wedding installation" loading="lazy"/>
+          </div>
+          <div class="gallery-item details" onclick="openGalleryLightbox(this)">
+            <img src="Screenshot 2026-05-29 002833.jpg" alt="Plate placement and candles" loading="lazy"/>
+          </div>
+          <div class="gallery-item details" onclick="openGalleryLightbox(this)">
+            <img src="Screenshot 2026-05-29 003113.jpg" alt="Gold-rimmed glassware" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gallery-lightbox" id="galleryLightbox" onclick="closeGalleryLightbox()">
+      <span class="gallery-lightbox-close">✕</span>
+      <img class="gallery-lightbox-content" id="galleryLightboxImg" src="" alt="" />
+      <div class="gallery-lightbox-caption" id="galleryLightboxCaption"></div>
+    </div>
+    <section class="section section-alt" id="catalog">
+
+
+
+
+      
     <section class="section" id="catalog">
       <div class="container">
         <div class="section-header" data-aos="fade-up">

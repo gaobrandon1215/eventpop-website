@@ -1016,3 +1016,52 @@ document.addEventListener('click', function(e) {
     if (typeof closeModal === 'function') closeModal();
   }
 });
+
+
+
+
+
+// ════════════ PRODUCTION GALLERY ENGINE ════════════
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".gallery-filter-btn");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        this.classList.add("active");
+
+        const activeFilter = this.getAttribute("data-filter");
+
+        galleryItems.forEach(item => {
+          if (activeFilter === "all" || item.classList.contains(activeFilter)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+});
+
+function openGalleryLightbox(element) {
+  const lightbox = document.getElementById("galleryLightbox");
+  const lightboxImg = document.getElementById("galleryLightboxImg");
+  const lightboxCaption = document.getElementById("galleryLightboxCaption");
+  const targetImg = element.querySelector("img");
+
+  if (lightbox && targetImg) {
+    lightboxImg.src = targetImg.src;
+    lightboxCaption.textContent = targetImg.alt;
+    lightbox.style.display = "flex";
+  }
+}
+
+function closeGalleryLightbox() {
+  const lightbox = document.getElementById("galleryLightbox");
+  if (lightbox) {
+    lightbox.style.display = "none";
+  }
+}
