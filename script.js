@@ -438,15 +438,16 @@ function renderCatalog() {
   }
 
   grid.innerHTML = items
-    .map(item => `
-      <div class="catalog-card" data-id="${item.id}" tabindex="0" style="cursor:pointer">
-        <img class="catalog-card-img" src="${item.img}" alt="${item.name}"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy"/>
-        <div class="catalog-card-img-placeholder">${item.emoji}</div>
+    .map((item, idx) => `
+      <div class="catalog-card" data-id="${item.id}" tabindex="0" style="cursor:pointer;animation-delay:${Math.min(idx*0.04,0.5)}s">
+        <div class="catalog-card-img-wrap">
+          <img class="catalog-card-img" src="${item.img}" alt="${item.name}"
+            onerror="this.parentElement.innerHTML='<div style=\\'font-size:2.2rem;display:flex;align-items:center;justify-content:center;width:100%;height:100%\\'>${item.emoji}</div>'" loading="lazy"/>
+        </div>
         <div class="catalog-card-body">
           <div class="catalog-card-cat">${item.catLabel}</div>
           <div class="catalog-card-name">${item.name}</div>
-          <div class="catalog-card-price"><strong>$${item.priceLow} – $${item.priceHigh}</strong> / event</div>
+          <div class="catalog-card-price"><strong>$${item.priceLow}–$${item.priceHigh}</strong> / event</div>
           <button class="catalog-card-add" data-id="${item.id}">+ Add to Quote</button>
         </div>
       </div>

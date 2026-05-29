@@ -1932,3 +1932,267 @@ button, input, textarea, select { font: inherit; }
   font-size: 2.5rem;
   cursor: pointer;
 } 
+
+
+
+
+
+/* ============================================
+   CATALOG & SERVICES UNIFIED GRID FIX
+   ============================================ */
+
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+}
+@media (min-width: 600px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 18px !important; }
+}
+@media (min-width: 900px) {
+  .services-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 22px !important; }
+}
+@media (min-width: 1200px) {
+  .services-grid { grid-template-columns: repeat(5, 1fr) !important; gap: 24px !important; }
+}
+
+.service-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0 !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  border-radius: var(--radius-xl) !important;
+  background: white !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: var(--shadow-md) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.service-card:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 16px 40px rgba(255, 107, 53, 0.18) !important;
+}
+
+.service-card-img-wrapper {
+  width: 100% !important;
+  height: 130px !important;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+  overflow: hidden !important;
+  margin-bottom: 0 !important;
+  background: var(--color-surface-2) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.service-card-img-wrapper img.service-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.service-card:hover .service-card-img {
+  transform: scale(1.08) !important;
+}
+
+/* Emoji placeholder wrapper (matches photo wrapper size) */
+.service-card-img-emoji {
+  background: linear-gradient(135deg, rgba(255,107,53,0.08) 0%, rgba(233,30,140,0.08) 100%) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.service-card-emoji-icon {
+  font-size: 3rem;
+  line-height: 1;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-card-emoji-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.service-name {
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  color: var(--color-text) !important;
+  text-align: center !important;
+  padding: 10px 10px 4px !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.service-count,
+.service-badge {
+  font-size: 0.78rem !important;
+  color: var(--color-text-muted) !important;
+  text-align: center !important;
+  padding: 0 10px 12px !important;
+  margin: 0 !important;
+}
+
+.service-badge {
+  color: var(--brand-1, #ff6b35) !important;
+  font-weight: 700 !important;
+}
+
+.service-card-featured {
+  border: 2px solid rgba(255, 107, 53, 0.35) !important;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.18) !important;
+}
+
+/* ============================================
+   CATALOG GRID — Vertical card layout
+   ============================================ */
+
+.catalog-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 14px !important;
+}
+@media (min-width: 600px) {
+  .catalog-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (min-width: 900px) {
+  .catalog-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 18px !important; }
+}
+
+.catalog-card {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  border-radius: var(--radius-xl) !important;
+  background: white !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: var(--shadow-md) !important;
+  overflow: hidden !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease !important;
+  animation: cardReveal 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardReveal {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.catalog-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 40px rgba(255,107,53,0.16) !important;
+  border-color: rgba(255,107,53,0.25) !important;
+}
+
+.catalog-card-img-wrap {
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(255,107,53,0.07), rgba(233,30,140,0.07));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-card-img {
+  width: 100% !important;
+  height: 110px !important;
+  object-fit: cover !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+  border-radius: 0 !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.catalog-card:hover .catalog-card-img {
+  transform: scale(1.07) !important;
+}
+
+.catalog-card-img-placeholder {
+  width: 100% !important;
+  height: 110px !important;
+  border-radius: 0 !important;
+  background: linear-gradient(135deg, rgba(255,107,53,0.07), rgba(233,30,140,0.07)) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 2.2rem !important;
+  flex-shrink: 0 !important;
+}
+
+.catalog-card-body {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  padding: 10px 12px 12px !important;
+}
+
+.catalog-card-cat {
+  font-size: 0.68rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  color: var(--color-text-muted) !important;
+  font-weight: 700 !important;
+}
+
+.catalog-card-name {
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.3 !important;
+  color: var(--color-text) !important;
+}
+
+.catalog-card-price {
+  font-size: 0.82rem !important;
+  color: #ff6b35 !important;
+  font-weight: 700 !important;
+  margin-top: auto !important;
+  padding-top: 4px !important;
+}
+
+.catalog-card-add {
+  align-self: flex-start !important;
+  margin-top: 7px !important;
+  font-size: 0.75rem !important;
+  padding: 5px 11px !important;
+  border-radius: 999px !important;
+  border: 1px solid #ff6b35 !important;
+  background: transparent !important;
+  color: #ff6b35 !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
+}
+
+.catalog-card-add:hover {
+  background: var(--brand-grad) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  transform: scale(1.04) !important;
+}
+
+.catalog-grid-wrap {
+  max-height: 680px !important;
+  overflow-y: auto !important;
+  padding-right: 6px !important;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,107,53,0.4) transparent;
+}
+
+.catalog-grid-wrap::-webkit-scrollbar { width: 5px; }
+.catalog-grid-wrap::-webkit-scrollbar-track { background: transparent; }
+.catalog-grid-wrap::-webkit-scrollbar-thumb {
+  background: rgba(255,107,53,0.4);
+  border-radius: 999px;
+}
